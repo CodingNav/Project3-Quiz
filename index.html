@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="./assets/js/javascript.js"></script>
+</head>
+
+<body onload="loadQuiz()">
+    <div class="container">
+        <div id="view-widget">
+
+        </div>
+    </div>
+
+    <script id="quiz-starter" type="text/x-handlebars-template">
+          <form>            
+        <label for="enterName">Enter Your Name</label>
+        <div class="row">
+          <div class="col">
+
+            <input type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+        <label for="pickQuiz">Pick A Quiz</label>
+        <select class="custom-select">
+            <option selected>Open this select menu</option>
+            <option value="1">Quiz One</option>
+            <option value="2">Quiz Two</option>
+          </select>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick = "startQuiz()">Start</button>
+      </form>
+
+      </script>
+
+    <script id="question-template" type="text/x-handlebars-template">
+          <form>
+        <label for="question1">{{question}}</label>
+        <div class="form-group">
+            {{#each choices}}
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                <label class="form-check-label" for="exampleRadios1">
+                {{this}}
+                </label>
+              </div>
+            {{/each}}
+        </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+      </script>
+</body>
+
+</html>
