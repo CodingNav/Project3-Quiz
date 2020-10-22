@@ -1,4 +1,15 @@
-var questionsUrl = "https://my-json-server.typicode.com/";
+var questionsUrl = "https://raw.githubusercontent.com/CodingNav/SPA-Quiz/main/assets/db/questions.json";
+
+fetch({
+    method : "GET", 
+    url : questionsUrl,
+    credentials: "include"
+}).then(function(response){
+    console.log(response);
+}).catch(function(err) {
+    console.log(err.message);
+})
+
 var quiz_one = [
     {
        question : "Where is the digit 8 in 348?",
