@@ -45,21 +45,44 @@
       </script>
 
     <script id="question-template" type="text/x-handlebars-template">
-          <form>
+          <form id="question">
         <label for="question1">{{question}}</label>
         <div class="form-group">
             {{#each choices}}
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                <input class="form-check-input" type="radio" name="exampleRadios" value="{{this}}">
                 <label class="form-check-label" for="exampleRadios1">
                 {{this}}
                 </label>
               </div>
             {{/each}}
         </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" onclick = "checkAnswer(event)">Submit</button>
     </form>
       </script>
+
+      <script id="correct-template" type="text/x-handlebars-template">
+        <h1>{{message}}</h1>
+    </script>
+
+      <script id="feedback-template" type="text/x-handlebars-template">
+        <form id="feedback">
+      <label for="question1">{{question}}</label>
+      <div class="form-group">
+          {{#each choices}}
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" value="{{this}}">
+              <label class="form-check-label" for="exampleRadios1">
+              {{this}}
+              </label>
+            </div>
+          {{/each}}
+      </div>
+        <button type="submit" class="btn btn-primary" onclick = "nextQuestion(event)">Got it!</button>
+        <br>
+       <label for="feedback1">{{feedback}}</label> 
+  </form>
+    </script>
 </body>
 
 </html>

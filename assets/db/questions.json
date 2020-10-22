@@ -1,0 +1,15 @@
+[
+    {
+       
+       "question" : "Where is the digit 8 in 348?",       
+       "answer" : "ones place",       
+       "choices" : ["ones place","tens place","hundreds place"],       
+       "feedback" : "Correct answer is ones place."
+    },
+    {        
+        "question" : "Where is the digit 8 in 587?",        
+        "answer" : "tens place",        
+        "choices" : ["ones place","tens place","hundreds place"],        
+        "feedback" : "Correct answer is tens place."
+     }
+]
