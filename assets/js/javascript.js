@@ -1,14 +1,15 @@
-var questionsUrl = "https://raw.githubusercontent.com/CodingNav/SPA-Quiz/main/assets/db/questions.json";
+var questionUrl = "https://json-loader.herokuapp.com/api/codingnav/SPA-Quiz/assets/db/questions.json";
 
-fetch({
-    method : "GET", 
-    url : questionsUrl,
-    credentials: "include"
-}).then(function(response){
-    console.log(response);
-}).catch(function(err) {
-    console.log(err.message);
+fetch(questionUrl).then(function(res) {
+    res.json().then(function(data) {
+        console.log(data);
+    }).catch(function(err) {
+        console.log(err);
+    });
 })
+.catch(function(err) {
+    console.log(err);
+});
 
 
 var quizzes = {
@@ -46,14 +47,24 @@ var isCorrectMessageShowing = false;
 var score = 0;
 var elapsedTime = 0;
 var stopWatch;
+var firstName;
+var lastName;
 
 var questionIndex = 0;
 var currentQuiz;
 
 function startQuiz(isRetake){
     if (isRetake == false) {
+    var firstNameInput = document.querySelector("#firstName");
+    firstName = firstNameInput.value;
+    var lastNameInput = document.querySelector("#lastName"); 
+    lastName = lastNameInput.value;
     var selectedQuiz = document.querySelector("#pickQuiz");
     var quizName = selectedQuiz.value;
+
+    if (firstName == "" || lastName == "" || quizName == "none") {
+        return alert("Please fill out form completely.")
+    }
     currentQuiz = quizzes[quizName];
     }
     score = 0;
@@ -156,9 +167,10 @@ function loadQuiz(){
     var template = Handlebars.compile(source);
     var resultInfo = {
         totalScore : score/(currentQuiz.length*5)*100, 
-        name : "john doe",
-        
+        name : firstName + " " + lastName,
     }
+
+    resultInfo.passed = (resultInfo.totalScore>=80);
     var html = template(resultInfo);
   
     document.querySelector("#view-widget").innerHTML = html;
