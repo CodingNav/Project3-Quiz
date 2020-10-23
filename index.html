@@ -2,24 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script src="./assets/js/javascript.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="./assets/js/javascript.js"></script>
 </head>
 
 <body onload="loadQuiz()">
-    <div class="container">
-        <div id="view-widget">
+  <div class="container">
+    <div id="view-widget">
 
-        </div>
     </div>
+    <div id="scoreboard-widget">
 
-    <script id="quiz-starter" type="text/x-handlebars-template">
+    </div>
+  </div>
+
+
+  <script id="quiz-starter" type="text/x-handlebars-template">
           <form>            
         <label for="enterName">Enter Your Name</label>
         <div class="row">
@@ -33,10 +37,10 @@
         </div>
         <div class="form-group">
         <label for="pickQuiz">Pick A Quiz</label>
-        <select class="custom-select">
-            <option selected>Open this select menu</option>
-            <option value="1">Quiz One</option>
-            <option value="2">Quiz Two</option>
+        <select class="custom-select" id="pickQuiz">
+            <option selected disabled>Open this select menu</option>
+            <option value="quiz_one">Quiz One</option>
+            <option value="quiz_two">Quiz Two</option>
           </select>
           </div>
           <button type="submit" class="btn btn-primary" onclick = "startQuiz()">Start</button>
@@ -44,7 +48,7 @@
 
       </script>
 
-    <script id="question-template" type="text/x-handlebars-template">
+  <script id="question-template" type="text/x-handlebars-template">
           <form id="question">
         <label for="question1">{{question}}</label>
         <div class="form-group">
@@ -59,13 +63,26 @@
         </div>
           <button type="submit" class="btn btn-primary" onclick = "checkAnswer(event)">Submit</button>
     </form>
+   
+      
       </script>
 
-      <script id="correct-template" type="text/x-handlebars-template">
+
+  <script id="scoreboard-template" type="text/x-handlebars-template">
+ <div class="card" style="width: 18rem;">
+<div class="card-body">
+        <p class="card-text">Number of questions answered: {{answeredQuestions}}</p>
+        <p class="card-text">Score: {{score}}</p>
+        <p class="card-text">Time Elapsed: {{elapsedTime}}</p>
+      </div>
+    </div>
+      </script>
+
+  <script id="correct-template" type="text/x-handlebars-template">
         <h1>{{message}}</h1>
     </script>
 
-      <script id="feedback-template" type="text/x-handlebars-template">
+  <script id="feedback-template" type="text/x-handlebars-template">
         <form id="feedback">
       <label for="question1">{{question}}</label>
       <div class="form-group">
@@ -83,6 +100,12 @@
        <label for="feedback1">{{feedback}}</label> 
   </form>
     </script>
+
+  <script id="result-template" type="text/x-handlebars-template">
+
+      <button type="submit" class="btn btn-primary" onclick = "startQuiz()">Re-Take</button>
+      <button type="submit" class="btn btn-primary" onclick = "loadQuiz()">Return to Menu</button>
+  </script>
 </body>
 
 </html>
