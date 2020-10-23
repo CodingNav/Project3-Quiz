@@ -1,8 +1,9 @@
 var questionUrl = "https://json-loader.herokuapp.com/api/codingnav/SPA-Quiz/assets/db/questions.json";
+var quizzes;
 
 fetch(questionUrl).then(function(res) {
     res.json().then(function(data) {
-        console.log(data);
+        quizzes=data;
     }).catch(function(err) {
         console.log(err);
     });
@@ -12,36 +13,7 @@ fetch(questionUrl).then(function(res) {
 });
 
 
-var quizzes = {
-    quiz_one : [
-        {
-           question : "Where is the digit 8 in 348?",
-           answer : "ones place",
-           choices : ["ones place","tens place","hundreds place"],
-           feedback : "Correct answer is ones place."
-        },
-        {
-            question : "Where is the digit 8 in 587?",
-            answer : "tens place",
-            choices : ["ones place","tens place","hundreds place"],
-            feedback : "Correct answer is tens place."
-         }
-    ],
-    quiz_two : [
-        {
-           question : "What's your name?",
-           answer : "ones place",
-           choices : ["ones place","tens place","hundreds place"],
-           feedback : "Correct answer is ones place."
-        },
-        {
-            question : "Hi",
-            answer : "tens place",
-            choices : ["ones place","tens place","hundreds place"],
-            feedback : "Correct answer is tens place."
-         }
-    ],
-}
+
 var correctMessages = ["Brilliant!", "Awesome!", "Good work!", "Wonderful!"];
 var isCorrectMessageShowing = false;
 var score = 0;
