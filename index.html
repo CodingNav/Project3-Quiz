@@ -43,7 +43,7 @@
             <option value="quiz_two">Quiz Two</option>
           </select>
           </div>
-          <button type="submit" class="btn btn-primary" onclick = "startQuiz()">Start</button>
+          <button type="submit" class="btn btn-primary" onclick = "startQuiz(false)">Start</button>
       </form>
 
       </script>
@@ -102,8 +102,17 @@
     </script>
 
   <script id="result-template" type="text/x-handlebars-template">
+   
+      {{#if totalScore}}
+      <p>Congratulations {{name}} you pass the quiz!</p>
+      {{else}}
+      <p>Sorry {{name}}, you fail the quiz</p>
+      {{/if}}
+      
+      <p>Percentage: {{totalScore}}%</p>
 
-      <button type="submit" class="btn btn-primary" onclick = "startQuiz()">Re-Take</button>
+
+      <button type="submit" class="btn btn-primary" onclick = "startQuiz(true)">Re-Take</button>
       <button type="submit" class="btn btn-primary" onclick = "loadQuiz()">Return to Menu</button>
   </script>
 </body>

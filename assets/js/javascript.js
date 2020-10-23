@@ -50,10 +50,15 @@ var stopWatch;
 var questionIndex = 0;
 var currentQuiz;
 
-function startQuiz(){
+function startQuiz(isRetake){
+    if (isRetake == false) {
     var selectedQuiz = document.querySelector("#pickQuiz");
     var quizName = selectedQuiz.value;
     currentQuiz = quizzes[quizName];
+    }
+    score = 0;
+    elapsedTime = 0;
+    questionIndex = 0;
     render_view("#question-template",0);
     scoreboard_view("#scoreboard-template");
     stopWatch = setInterval(function(){
@@ -82,8 +87,7 @@ function checkAnswer(event){
         setTimeout(function(){ 
             isCorrectMessageShowing = false;
             scoreboard_view("#scoreboard-template");
-             questionIndex++;
-        render_view("#question-template", questionIndex);   
+             nextQuestion(event); 
         },1000);
 
     }
@@ -118,11 +122,19 @@ var correct_view = (view_id, msg) => {
 
 function loadQuiz(){
     render_view("#quiz-starter");
+   document.querySelector("#scoreboard-widget").innerHTML = "";
   }
 
-  function nextQuestion(){
+  function nextQuestion(event){
+      event.preventDefault();
     questionIndex++;
-    render_view("#question-template", questionIndex);
+    if (questionIndex >= currentQuiz.length){
+        clearInterval(stopWatch);
+        result_view("#result-template");
+    }
+    else {
+        render_view("#question-template", questionIndex); 
+    }
   }
 
   var scoreboard_view = (view_id) => {
@@ -136,4 +148,18 @@ function loadQuiz(){
     var html = template(scoreInfo);
   
     document.querySelector("#scoreboard-widget").innerHTML = html;
+  }
+
+
+  var result_view = (view_id) => {
+    var source = document.querySelector(view_id).innerHTML;
+    var template = Handlebars.compile(source);
+    var resultInfo = {
+        totalScore : score/(currentQuiz.length*5)*100, 
+        name : "john doe",
+        
+    }
+    var html = template(resultInfo);
+  
+    document.querySelector("#view-widget").innerHTML = html;
   }
