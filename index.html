@@ -50,6 +50,7 @@
 
   <script id="question-template" type="text/x-handlebars-template">
           <form id="question">
+          <h3>Question {{questionNumber}}</h3>
         <label for="question1">{{question}}</label>
         <div class="form-group">
             {{#each choices}}
@@ -84,6 +85,7 @@
 
   <script id="feedback-template" type="text/x-handlebars-template">
         <form id="feedback">
+          <h3>Question {{questionNumber}}</h3>
       <label for="question1">{{question}}</label>
       <div class="form-group">
           {{#each choices}}

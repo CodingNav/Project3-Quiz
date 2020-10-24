@@ -1,30 +1,249 @@
 {
    "quiz_one" : [
-       {
-          "question" : "Where is the digit 8 in 348?",
-          "answer" : "ones place",
-          "choices" : ["ones place","tens place","hundreds place"],
-          "feedback" : "Correct answer is ones place."
+      {
+         "question" : "HTML: What does HTML stand for?",
+         "answer" : "Hyper Text Markup Language",
+         "choices" : ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language"],
+         "feedback" : "Correct answer is Hyper Text Markup Language"
+      },
+      {
+         "question" : "HTML: Who is making the Web standards?",
+         "answer" : "The World Whide Web Consortium",
+         "choices" : ["Google", "Mozilla", "Microsoft", "The World Whide Web Consortium"],
+         "feedback" : "Correct answer is The World Whide Web Consortium"
+      },
+      {
+         "question" : "HTML: Choose the correct HTML element for the largest heading:",
+         "answer" : "<h1>",
+         "choices" : ["<h6>","<h1>","<head>","<heading>"],
+         "feedback" : "Correct answer is <h1>"
+      },
+      {
+         "question" : "HTML: Choose the correct HTML element to define important text",
+         "answer" : "<br>",
+         "choices" : ["<i>","<important>","<b>","<strong>"],
+         "feedback" : "Correct answer is <br>"
+      },
+      {
+         "question" : "HTML: Which character is used to indicate an end tag?",
+         "answer" : "/",
+         "choices" : ["^","*","/","<"],
+         "feedback" : "Correct answer is /"
+      },
+      {
+         "question" : "HTML: How can you make a numbered list?",
+         "answer" : "<ol>",
+         "choices" : ["<dl>","<ol>","<ul>","<list>"],
+         "feedback" : "Correct answer is <ol>"
+      },
+      {
+         "question" : "CSS: What does CSS stand for?",
+         "answer" : "Cascading Style Sheets",
+         "choices" : ["Computer Style Sheets", "Creative Style Sheets","Colorful Style Sheets", "Cascading Style Sheets"],
+         "feedback" : "Correct answer is Cascading Style Sheets"
+      },
+      {
+         "question" : "CSS: Where in an HTML document is the correct place to refer to an external style sheet?",
+         "answer" : "In the <head> section",
+         "choices" : ["At the end of the document","In the <head> section","In the <body> section"],
+         "feedback" : "Correct answer is in the <head> section"
+      },
+      {
+         "question" : "CSS: Which HTML tag is used to define an internal style sheet?",
+         "answer" : "<style>",
+         "choices" : ["<style>","<script>","<css>"],
+         "feedback" : "Correct answer is <style>"
+      },
+      {
+         "question" : "CSS: Which HTML attribute is used to define inline styles?",
+         "answer" : "style",
+         "choices" : ["font","styles","style","class"],
+         "feedback" : "Correct answer is style"
+      },
+      {
+         "question" : "CSS: How do you insert a comment in a CSS file?",
+         "answer" : "/* this is a comment */",
+         "choices" : ["// this is a comment","// this is a comment //", "' this is a comment","/* this is a comment */"],
+         "feedback" : "Correct answer is /* this is a comment */"
+      },
+      {
+         "question" : "CSS: Which property is used to change the background color?",
+         "answer" : "background-color",
+         "choices" : ["bgcolor", "color","background-color"],
+         "feedback" : "Correct answer is background-color"
+      },
+      
+      {
+         "question" : "Javascript: Inside which HTML element do we put the JavaScript?",
+         "answer" : "<script>",
+         "choices" : ["<js>","<scripting>","<script>","<javascript>"],
+         "feedback" : "Correct answer is <script>"
+      },
+      {
+         "question" : "Where is the correct place to insert a JavaScript?",
+         "answer" : "Both the <head> section and the <body> section",
+         "choices" : ["The <head> section","The <body> section","Both the <head> section and the <body> section"],
+         "feedback" : "Correct answer is both the <head> section and the <body> section"
+      },
+      {
+         "question" : "Javascript: Which of the following function of String object returns a string representing the specified object?",
+         "answer" : "toString()",
+         "choices" : ["toLocaleUpperCase()","toUpperCase()","toString()","subString()"],
+         "feedback" : "Correct answer is toString(). It returns a string representing the specified object."
+      },
+      {
+          "question" : "Javascript: Which of the following is the correct syntax to print a page using JavaScript?",
+          "answer" : "window.print();",
+          "choices" : ["window.print();","browser.print();","navigator.print();","document.print();"],
+          "feedback" : "Correct answer is window.print(); indexOf() method returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found."
        },
        {
-           "question" : "Where is the digit 8 in 587?",
-           "answer" : "tens place",
-           "choices" : ["ones place","tens place","hundreds place"],
-           "feedback" : "Correct answer is tens place."
-        }
+        "question" : "Javascript: Which of the following function of Array object creates a new array with the results of calling a provided function on every element in this array?",
+        "answer" : "map()",
+        "choices" : ["push()","join()","pop()","map()"],
+        "feedback" : "Correct answer is map() − Creates a new array with the results of calling a provided function on every element in this array."
+     },
+      {
+         "question" : "Bootstrap: Which class provides a responsive fixed width container?",
+         "answer" : ".container",
+         "choices" : [".container-fixed",".container",".container-fluid"],
+         "feedback" : "Correct answer is .container"
+      },
+      {
+         "question" : "Bootstrap: The Bootstrap grid system is based on how many columns?",
+         "answer" : "12",
+         "choices" : ["3","6","9","12"],
+         "feedback" : "Correct answer is "
+      },
+      {
+         "question" : "Bootstrap: Which class is used to create a button group?",
+         "answer" : ".btn-group",
+         "choices" : [".group-btn",".group-button",".button-group",".btn-group"],
+         "feedback" : "Correct answer is .btn-group"
+      }
+      
+       
    ],
    "quiz_two" : [
-       {
-          "question" : "What's your name?",
-          "answer" : "ones place",
-          "choices" : ["ones place","tens place","hundreds place"],
-          "feedback" : "Correct answer is ones place."
-       },
-       {
-           "question" : "Hi",
-           "answer" : "tens place",
-           "choices" : ["ones place","tens place","hundreds place"],
-           "feedback" : "Correct answer is tens place."
-        }
+      {
+         "question" : "Python: How do you insert COMMENTS in Python code?",
+         "answer" : "#This is a comment",
+         "choices" : ["/*This is a comment*/","#This is a comment","//This is a comment"],
+         "feedback" : "Correct answer is #This is a comment"
+      },
+      {
+         "question" : "Python: Which one is NOT a legal variable name?",
+         "answer" : "my-var",
+         "choices" : ["Myvar","_myvar","my-var","my_var"],
+         "feedback" : "Correct answer is my-var"
+      },
+      {
+         "question" : "Python: How do you create a variable with the numeric value 5?",
+         "answer" : "Both the other answers are correct",
+         "choices" : ["x = 5","Both the other answers are correct","x = int(5)"],
+         "feedback" : "Correct answer is that both of the other answers are correct"
+      },
+      {
+         "question" : "Python: What is the correct file extension for Python files?",
+         "answer" : ".py",
+         "choices" : [".pyth",".pyt",".pt",".py"],
+         "feedback" : "Correct answer is .py"
+      },
+      {
+         "question" : "Python: What is the correct way to create a function in Python?",
+         "answer" : "def myFunction():",
+         "choices" : ["def myFunction():","function myfunction():","create myFunction():"],
+         "feedback" : "Correct answer is def myFunction():"
+      },
+      {
+         "question" : "jQuery: Which of the following is correct?",
+         "answer" : "jQuery is a JavaScript Library",
+         "choices" : ["jQuery is a JSON Library","jQuery is a JavaScript Library"],
+         "feedback" : "Correct answer is jQuery is a JavaScript Library"
+      },
+      {
+         "question" : "jQuery: jQuery uses CSS selectors to select elements?",
+         "answer" : "True",
+         "choices" : ["True", "False"],
+         "feedback" : "Correct answer is True"
+      },
+      {
+         "question" : "jQuery: Which sign does jQuery use as a shortcut for jQuery?",
+         "answer" : "the $ sign",
+         "choices" : ["the $ sign","the % sign","the ? sign"],
+         "feedback" : "Correct answer is the $ sign"
+      },
+      {
+         "question" : "jQuery: Is jQuery a library for client scripting or server scripting?",
+         "answer" : "Client scripting",
+         "choices" : ["Server scripting","Client scripting"],
+         "feedback" : "Correct answer is Client scripting"
+      },
+      {
+         "question" : "jQuery: Is it possible to use jQuery together with AJAX?",
+         "answer" : "Yes",
+         "choices" : ["Yes","No"],
+         "feedback" : "Correct answer is yes"
+      },
+      {
+         "question" : "SQL: What does SQL stand for?",
+         "answer" : "Structured Query Language",
+         "choices" : ["Structured Question Language","Strong Question Language","Structured Query Language"],
+         "feedback" : "Correct answer is "
+      },
+      {
+         "question" : "SQL: Which SQL statement is used to extract data from a database?",
+         "answer" : "SELECT",
+         "choices" : ["EXTRACT","OPEN","GET","SELECT"],
+         "feedback" : "Correct answer is SELECT"
+      },
+      {
+         "question" : "SQL: Which SQL statement is used to update data in a database?",
+         "answer" : "UPDATE",
+         "choices" : ["SAVE","UPDATE","SAVE AS","MODIFY"],
+         "feedback" : "Correct answer is UPDATE"
+      },
+      {
+         "question" : "SQL: Which SQL statement is used to delete data from a database?",
+         "answer" : "DELETE",
+         "choices" : ["DELETE","COLLAPSE","REMOVE"],
+         "feedback" : "Correct answer is DELETE"
+      },
+      {
+         "question" : "SQL: Which SQL statement is used to insert new data in a database?",
+         "answer" : "INSERT INTO",
+         "choices" : ["ADD NEW","INSERT INTO","INSERT NEW","ADD RECORD"],
+         "feedback" : "Correct answer is INSERT INTO"
+      },
+      {
+         "question" : "Java: Java is short for JavaScript.",
+         "answer" : "False",
+         "choices" : ["True","False"],
+         "feedback" : "Correct answer is False"
+      },
+      {
+         "question" : "Java: How do you insert COMMENTS in Java code?",
+         "answer" : "// This is a comment",
+         "choices" : ["/* This is a comment","// This is a comment", "# This is a comment"],
+         "feedback" : "Correct answer is // This is a comment"
+      },
+      {
+         "question" : "Java: Which data type is used to create a variable that should store text?",
+         "answer" : "String",
+         "choices" : ["Txt","string","String","myString"],
+         "feedback" : "Correct answer is String"
+      },
+      {
+         "question" : "Java: Which operator is used to add together two values?",
+         "answer" : "The + sign",
+         "choices" : ["The * sign","The + sign","The & sign"],
+         "feedback" : "Correct answer is the + sign"
+      },
+      {
+         "question" : "Java: The value of a string variable can be surrounded by single quotes.",
+         "answer" : "False",
+         "choices" : ["True","False"],
+         "feedback" : "Correct answer is False"
+      }
    ]
 }

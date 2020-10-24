@@ -84,6 +84,7 @@ var render_view = (view_id, quiz_index) => {
     var template = Handlebars.compile(source);
     var html = "";
     if (currentQuiz != null && currentQuiz[quiz_index]) {
+        currentQuiz[quiz_index].questionNumber = quiz_index +1; 
         html = template(currentQuiz[quiz_index]);
     }
     else {
