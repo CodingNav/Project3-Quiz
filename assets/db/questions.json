@@ -8,9 +8,9 @@
       },
       {
          "question" : "HTML: Who is making the Web standards?",
-         "answer" : "The World Whide Web Consortium",
-         "choices" : ["Google", "Mozilla", "Microsoft", "The World Whide Web Consortium"],
-         "feedback" : "Correct answer is The World Whide Web Consortium"
+         "answer" : "The World Wide Web Consortium",
+         "choices" : ["Google", "Mozilla", "Microsoft", "The World Wide Web Consortium"],
+         "feedback" : "Correct answer is The World Wide Web Consortium"
       },
       {
          "question" : "HTML: Choose the correct HTML element for the largest heading:",
