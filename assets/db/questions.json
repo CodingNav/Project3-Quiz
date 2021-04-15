@@ -21,7 +21,7 @@
       {
          "question" : "HTML: Choose the correct HTML element to define important text",
          "answer" : "<br>",
-         "choices" : ["<i>","<important>","<b>","<strong>"],
+         "choices" : ["<i>","<important>","<br>","<strong>"],
          "feedback" : "Correct answer is <br>"
       },
       {
