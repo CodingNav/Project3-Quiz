@@ -50,17 +50,16 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .form-control {
     background-color: #8A9EFF;
     border: none;
-    color: #c5cefc;
+    color: #192874;
 }
 
-#pickQuiz[value*="quiz_one"] {
-    color: #192874;
+#pickQuiz {
+    color: #c5cefc;
 }
 
 .form-control:focus {
     background-color: #8A9EFF;
     border: none;
-    color: #c5cefc;
 }
 
 .btn {
