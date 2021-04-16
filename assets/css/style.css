@@ -1,8 +1,22 @@
+body {
+    background-color: #361999;
+    color: white;
+    font-family: 'GalanoGrotesque-Light', sans-serif;
+    line-height: 25px;
+    letter-spacing: 3px;
+}
+
 h1 {
-    font-family: 'Roboto', sans-serif;
+    color: cyan;
+    font-family: 'Antonio', sans-serif;
     font-size: 80px;
     margin-top: 30px;
     text-align: center;
+}
+
+hr {
+    width: 60%;
+    border-top: 2px solid #ff5395;
 }
 
 .container {
@@ -14,15 +28,72 @@ h1 {
 }
 
 .card {
+    background-color: #8A9EFF;
+    color: white;
     margin-top: 30px;
 }
 
+.label {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #8A9EFF inset !important;
+    -webkit-text-fill-color: #192874 !important;
+}
+
+.form-control::placeholder {
+    color: #c5cefc;
+}
+
+.form-control {
+    background-color: #8A9EFF;
+    border: none;
+    color: #c5cefc;
+}
+
+#pickQuiz[value*="quiz_one"] {
+    color: #192874;
+}
+
+.form-control:focus {
+    background-color: #8A9EFF;
+    border: none;
+    color: #c5cefc;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 6px 30px;
+}
+
+.btn:hover {
+    background-color: #ff5395;
+    border: 3px solid cyan;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 3px solid cyan;
+    border-radius: 25px;
+    font-size: 25px;
+    color: #ff5395;
+}
+
+.question-number {
+    color: #8A9EFF;
+    font-family: 'Vesper Libre', serif;
+}
+
 #feedback {
+    color: #ff5395;
     margin-top: 20px;
 }
 
 #message {
-    color: #007bff;
+    color: #ff5395;
+    font-family: 'Vesper Libre', serif;
     font-weight: bold;
     font-size: 50px;
 }

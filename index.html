@@ -8,16 +8,22 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto&effect=neon|outline|emboss|shadow-multiple">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Vesper+Libre&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="./assets/js/javascript.js"></script>
 </head>
 
-<h1 class="font-effect-shadow-multiple">Web Development Quiz</h1>
+
 
 <body onload="loadQuiz()">
+
+  <h1>WEB DEVELOPMENT QUIZ</h1>
+
+  <hr>
+
   <div class="container">
     <div id="view-widget">
 
@@ -31,7 +37,7 @@
 
   <script id="quiz-starter" type="text/x-handlebars-template">
           <form>            
-        <label for="enterName">Enter Your Name</label>
+        <label class="label" for="enterName">Enter Your Name</label>
         <div class="row">
           <div class="col">
 
@@ -42,8 +48,8 @@
           </div>
         </div>
         <div class="form-group">
-        <label for="pickQuiz">Pick A Quiz</label>
-        <select class="custom-select" id="pickQuiz">
+        <label class="label" for="pickQuiz">Pick A Quiz</label>
+        <select class="custom-select form-control" id="pickQuiz">
             <option selected value="none" disabled>Open this select menu</option>
             <option value="quiz_one">Quiz One: HTML, CSS, Javascript, Bootstrap</option>
             <option value="quiz_two">Quiz Two: Python, jQuery, SQL, Java</option>
@@ -56,11 +62,11 @@
 
   <script id="question-template" type="text/x-handlebars-template">
           <form id="question">
-          <h3>Question {{questionNumber}}</h3>
-        <label for="question1">{{question}}</label>
+          <h3 class="question-number">Question {{questionNumber}}</h3>
+        <label class="text-white" for="question1">{{question}}</label>
         <div class="form-group">
             {{#each choices}}
-            <div class="form-check">
+            <div class="form-check text-white">
                 <input class="form-check-input" type="radio" name="exampleRadios" value="{{this}}">
                 <label class="form-check-label" for="exampleRadios1">
                 {{this}}
@@ -87,8 +93,8 @@
     </script>
 
   <script id="feedback-template" type="text/x-handlebars-template">
-        <form id="feedback">
-          <h3>Question {{questionNumber}}</h3>
+        <form>
+          <h3 class="question-number">Question {{questionNumber}}</h3>
       <label for="question1">{{question}}</label>
       <div class="form-group">
           {{#each choices}}
